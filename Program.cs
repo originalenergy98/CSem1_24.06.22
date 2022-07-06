@@ -123,6 +123,7 @@
 
 // --------------------------------------------------------------------------------------------------------
 //                                     Семинар 2
+
 // 9. Напишите программу, которачя выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
 // 78 -> 8
 // 12 -> 2
@@ -222,4 +223,101 @@
 // else 
 //     Console.WriteLine("Не верно указан день");
 //
+
+//--------------------------------------------------------------
+//                            Семинар 3
+
+// 17
+
+// int[] Input()
+// {
+//     int[] Array = new int[2];
+//     Console.WriteLine("Введите координту числа X: ");
+//     int x = Convert.ToInt32(Console.ReadLine());
+//     Array[0] = x;
+//     Console.WriteLine("Введите координту числа Y: ");
+//     int y = Convert.ToInt32(Console.ReadLine());
+//     Array[1] = y;
+//     return Array;
+// }
+
+// int[] mini = Input();
+// while (mini[0] == 0 || mini[1] == 0)
+//     {Console.WriteLine("Точка находится на оси");
+//     mini = Input();}
+// if (mini[0] > 0 && mini[1] > 0){
+//     Console.WriteLine("Точка находиится в 1 четверти");}
+// else if (mini[0] < 0 && mini[1] < 0){
+//     Console.WriteLine("Точка находиится в 3 четверти");}
+// else if (mini[0] > 0 && mini[1] < 0){
+//     Console.WriteLine("Точка находиится в 4 четверти");}
+// else{
+//     Console.WriteLine("Точка находиится в 2 четверти");}
+
+
+// 18
+// Console.WriteLine("Введите номер четверти: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// if (num < 1 || num > 4)
+//     {Console.WriteLine("Номер четверти введен не верно");}
+// else if (num == 1){
+//     Console.WriteLine("Координаты:  x < 0, y > 0");}
+// else if (num == 2){
+//     Console.WriteLine("Координаты:  x > 0, y > 0");}
+// else if (num == 3){
+//     Console.WriteLine("Координаты:  x > 0, y < 0");}
+// else{
+//     Console.WriteLine("Координаты:  x < 0, y < 0");}
+
+// 21
+
+// double SystemCoor( int x1, int y1, int x2, int y2){
+//     return(Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)));
+// }
+//     Console.WriteLine("Введите координту x1: ");
+//     int Ax = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту y1: ");
+//     int Ay = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту x2: ");
+//     int Bx = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту y2: ");
+//     int By = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(Math.Round(SystemCoor(Ax, Ay, Bx, By), 4));// 4- знаки после запятой
+
+//22
+/*
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Console.Write(num + " => ");
+for (int i = 1; i <= num; i++)
+{
+    Console.Write(i * i + ", ");
+}
+*/
+//-------------------------------------------------------------------------
+//                        Домашнее задание 3
+
+// 19 
+
+Console.WriteLine("Введите пятизначноое число ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num < 10000|| num > 100000)
+{
+    Console.WriteLine("Введено не пятизначное число");
+}
+else
+{
+    while (num > 9999){
+    int num2 = num % 100000;
+    Console.WriteLine(num2);}}
+
+
+
+// 21
+
+// 23
 
