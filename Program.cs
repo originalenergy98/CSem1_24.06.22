@@ -1,11 +1,11 @@
 ﻿//                                        Семинар 1
 
-// 1. Напишите программу, которая на вход принимает число и выдаёт его квадрат (число умноженное на само себя) 
+// 1. Напишите программу, которая на вход принимает число и выдаёт его квадрат (число умноженное на само себя)
 
-// Console.Write("Input number:"); // запрашиваем у пользователя число 
+// Console.Write("Input number:"); // запрашиваем у пользователя число
 // int number = Convert.ToInt32(Console.ReadLine()); // создаем переменную number и сохраняем в нее значение, введенное из консоли
 // 2. int number = 4;
-// 2. int q = number * number; // объявляем переменную q и сохраняем в нее квадрат числа number 
+// 2. int q = number * number; // объявляем переменную q и сохраняем в нее квадрат числа number
 // Console.WriteLine(number + " -> " + q);//выводим значение переменных number и q
 // 2. Console.WriteLine(number + " -> " + number * number);
 
@@ -46,7 +46,7 @@
 //     Console.WriteLine("Суббота");
 // else if (day == 7)
 //     Console.WriteLine("Воскресенье");
-// else 
+// else
 //     Console.WriteLine("Не верно указан день");
 
 
@@ -74,7 +74,7 @@
 // Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
 // 2, 3, 7 -> 7
-// 44 5 78 -> 78 
+// 44 5 78 -> 78
 // 22 3 9 -> 22
 
 // Console.Write("Input number_1: ");
@@ -82,7 +82,7 @@
 // Console.Write("Input number_2: ");
 // int num_2 = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Input number_3: ");
-// int num_3 = Convert.ToInt32(Console.ReadLine()); 
+// int num_3 = Convert.ToInt32(Console.ReadLine());
 
 // if(num_1 > num_2 & num_1 > num_3){ //if & - если и то и то верно
 //     Console.WriteLine("max number: " + num_1);}
@@ -90,7 +90,7 @@
 //     Console.WriteLine("max number: " + num_2);}
 // else if(num_3 > num_1 & num_3 > num_2){
 //     Console.WriteLine("max number: " + num_3);}
-// else 
+// else
 //     {Console.WriteLine("False");}
 
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
@@ -146,7 +146,7 @@
 
 // void randomNumber();
 
-// int SumTwoNumbers(int a, int b){ // int возвращает   
+// int SumTwoNumbers(int a, int b){ // int возвращает
 //     int sum = a +b;
 //     return sum;
 // }
@@ -188,7 +188,7 @@
 // if(0 == num / 100){
 //     Console.WriteLine("Третьей цифры нет");}
 // else{while (num > 1000){
-//     num = num / 10;} 
+//     num = num / 10;}
 //     Console.WriteLine(num % 10);}
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
@@ -196,7 +196,7 @@
 // 6 -> да
 // 7 -> да
 // 1 -> нет
-       
+
 // Console.WriteLine("Введите день: ");
 // int day = Convert.ToInt32(Console.ReadLine());
 // if(day == 1)
@@ -213,14 +213,14 @@
 //     Console.WriteLine("Суббота");
 // else if (day == 7)
 //     Console.WriteLine("Воскресенье");
-// else 
+// else
 //     Console.WriteLine("Не верно указан день");
 
 // if (day < 6){
 //     Console.WriteLine("Рабочий");}
-// else if (day == 6 || day == 7) 
+// else if (day == 6 || day == 7)
 //     Console.WriteLine("Выходной");
-// else 
+// else
 //     Console.WriteLine("Не верно указан день");
 //
 
@@ -298,26 +298,62 @@ for (int i = 1; i <= num; i++)
 }
 */
 //-------------------------------------------------------------------------
-//                        Домашнее задание 3
+//                       Домашнее задание 3
 
-// 19 
+//19
 
-Console.WriteLine("Введите пятизначноое число ");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите пятизначноое число ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-if (num < 10000|| num > 100000)
-{
-    Console.WriteLine("Введено не пятизначное число");
-}
-else
-{
-    while (num > 9999){
-    int num2 = num % 100000;
-    Console.WriteLine(num2);}}
-
+// if (num < 10000 || num > 100000)
+// {
+//     Console.WriteLine("Введено не пятизначное число");
+// }
+// while (num > 9999 && num < 100000)
+// {
+//     int a1 = num % 10;
+//     int a2 = num / 10 % 10;
+//     int a3 = num / 100 % 10;
+//     int a4 = num / 1000 % 10;
+//     int a5 = num / 10000;
+//     int num2 = a1 * 10000 + a2 * 1000 + a3 * 100 + a4 * 10 + a5;
+//     if (num == num2)
+//     {
+//         Console.WriteLine(" является палиндромом");
+//     }
+//     else 
+//     {
+//         Console.WriteLine(" не является палиндромом");
+//     }}
 
 
 // 21
 
+// double Coor( int x1, int y1, int z1, int x2, int y2, int z2){
+//     return(Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) + (z1 - z2) * (z1 - z2)));
+// }
+//     Console.WriteLine("Введите координту x1: ");
+//     int Ax = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту y1: ");
+//     int Ay = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту z1: ");
+//     int Az = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту x2: ");
+//     int Bx = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту y2: ");
+//     int By = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите координту z2: ");
+//     int Bz = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(Coor(Ax, Ay, Az, Bx, By, Bz)); // 4- знаки после запятой
+
 // 23
 
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write(num + " => ");
+// for (int i = 1; i <= num; i++)
+// {
+//     Console.Write(i * i * i + ", ");
+// }
