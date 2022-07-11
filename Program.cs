@@ -421,7 +421,7 @@ for (int i = 1; i <= num; i++)
 // }
 
 // 30
-// int[] GenerateRandomArray(int N, int start, int end){
+// int[] GenerateRandomArray(int N, int start, int end){ // создает случайные элементы 
 //     int[] RandomArray = new int[N];
 //     for (int i = 0; i < N; i++)
 //     {
@@ -430,7 +430,7 @@ for (int i = 1; i <= num; i++)
 //     return RandomArray;
 // }
 
-// int[] GenerateArray(int N, int start, int end){
+// int[] GenerateArray(int N, int start, int end){ // Запрашивает случайные элементы
 //     int[] RandomArray = new int[N];
 //     for (int i = 0; i < N; i++)
 //     {
@@ -440,7 +440,7 @@ for (int i = 1; i <= num; i++)
 //     return RandomArray;
 // }
 
-// void ShowArray(int[] array){
+// void ShowArray(int[] array){ // Выводит элементы в консоль
     
 //     for (int i = 0; i < array.Length; i++)
 //     {
@@ -512,7 +512,7 @@ for (int i = 1; i <= num; i++)
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-// int[] myNumArray(int N, int start, int end){
+// int[] myNumArray(int N, int start, int end){ 
 //     int[] RandomArray = new int[N];
 //     for (int i = 0; i < N; i++)
 //     {
