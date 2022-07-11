@@ -512,7 +512,7 @@ for (int i = 1; i <= num; i++)
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-// int[] GenerateRandomArray(int N, int start, int end){
+// int[] myNumArray(int N, int start, int end){
 //     int[] RandomArray = new int[N];
 //     for (int i = 0; i < N; i++)
 //     {
@@ -520,7 +520,8 @@ for (int i = 1; i <= num; i++)
 //     }
 //     return RandomArray;
 // }
-// void ShowArray(int[] array){
+
+// void newShowArray(int[] array){
     
 //     for (int i = 0; i < array.Length; i++)
 //     {
@@ -536,5 +537,5 @@ for (int i = 1; i <= num; i++)
 // Console.WriteLine("Введите последнее число случайно генирируемого диапозона");
 // int max = Convert.ToInt32(Console.ReadLine());
 
-// int[] myRandomArray = GenerateRandomArray(num, min, max);
-// ShowArray(myRandomArray);
+// int[] myRandomArray = myNumArray(num, min, max);
+// newShowArray(myRandomArray);
