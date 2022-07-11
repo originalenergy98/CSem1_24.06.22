@@ -357,3 +357,184 @@ for (int i = 1; i <= num; i++)
 // {
 //     Console.Write(i * i * i + ", ");
 // }
+
+//---------------------------------------------------------------------------------------
+//                                    Семинар 4
+
+// 24
+
+
+// Решение с for
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// Console.Write(num + " => ");
+// for (int i = 1; i <= num; i++)
+// {
+//     sum = sum + i;}
+// Console.WriteLine(sum);
+
+// Решение с while
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// int i = 1;
+// while (i <= num)
+// {
+//     sum = sum + i;
+//     i += 1;
+// }
+// Console.WriteLine(sum);
+
+// Решение методом int
+// int SumNumbers(int N)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= N; i++)
+//     {
+//         sum = sum + i;}
+//     return sum;
+// }
+
+// for (int i = 0; i < 5; i++)
+// {
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(num + "->" + SumNumbers(num));
+// }
+
+// Решение методом void
+// void SumNumbers(int N)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= N; i++)
+//     {
+//         sum = sum + i;}
+//     Console.WriteLine(N + "->" + sum);
+// }
+
+// for (int i = 0; i < 5; i++)
+// {
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// SumNumbers(num);
+// }
+
+// 30
+// int[] GenerateRandomArray(int N, int start, int end){
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// int[] GenerateArray(int N, int start, int end){
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Console.WriteLine($"Введите {i + 1} элемент массива");
+//         RandomArray[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return RandomArray;
+// }
+
+// void ShowArray(int[] array){
+    
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число случайно генирируемого диапозона");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число случайно генирируемого диапозона");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myRandomArray = GenerateRandomArray(num, min, max);
+// ShowArray(myRandomArray);
+// Console.WriteLine("------------------");
+// int[] myArray = GenerateArray(num, min, max);
+// ShowArray(myArray);
+
+
+//------------------------------------------------------------------------------------------------
+//                                          Домашнее задание
+
+// 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+
+// void StepNumbers(int a, int b)
+// {
+//     int step = 1;
+//     for (int i = 0; i < b; i++){   
+//         step = step * a;}
+//     Console.WriteLine(a + "->" + step);
+// }
+
+// Console.WriteLine("Введите число A");
+// int A = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число B");
+// int B = Convert.ToInt32(Console.ReadLine());
+// StepNumbers(A, B);
+
+
+// 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+
+// void SumNumbers(int n)
+// {
+//     int j = 0;
+//     int sum = 0;
+//     while(n > 0){
+//         j = n % 10;
+//         n = n / 10;
+//         sum = sum + j;}
+//     Console.WriteLine(sum);
+// }
+
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// SumNumbers(num);
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+// int[] GenerateRandomArray(int N, int start, int end){
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+// void ShowArray(int[] array){
+    
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число случайно генирируемого диапозона");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число случайно генирируемого диапозона");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myRandomArray = GenerateRandomArray(num, min, max);
+// ShowArray(myRandomArray);
