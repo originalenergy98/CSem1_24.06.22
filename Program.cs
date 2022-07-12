@@ -539,3 +539,323 @@ for (int i = 1; i <= num; i++)
 
 // int[] myRandomArray = myNumArray(num, min, max);
 // newShowArray(myRandomArray);
+
+//---------------------------------------------------------------------------------------
+//                                          Семинар 5
+
+// Примеры форматирования
+
+// string name = "Имя";
+// int age = 99;
+// Console.WriteLine("Имя: {0} Возраст: {1}", name, age);
+
+// int number = 23;
+// string result = string.Format("{0:f}", number);
+
+// Console.WriteLine(result);
+
+// double number2 = 45.08;
+// string result2 = string.Format("{0:f5}", number2);
+// Console.WriteLine(number2);
+// Console.WriteLine(result2);
+
+// string name = "Имя";
+// int age = 99;
+// Console.WriteLine($"Имя: {name} Возраст: {age}");
+
+// int x = 7;
+// int y = 8;
+// string result = $"{x} + {y} = {x + y}";
+// Console.WriteLine(result);
+
+// string name = "Елена";
+// int age = 99;
+
+// Console.WriteLine($"Имя: {name, -10} Возраст: {age}"); // пробелы после
+// Console.WriteLine($"Имя: {name, 15} Возраст: {age}"); // пробелы до
+
+// 31
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(12, -9, 9);
+// OutputArray(MySetArray);
+
+// int sum_pos = 0;
+// int sum_neg = 0;
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if(MySetArray[i] > 0)
+//         sum_pos += MySetArray[i];
+//     else
+//         sum_neg += MySetArray[i];
+// }
+
+// Console.WriteLine($"Сумма положительных: {sum_pos}. Сумма отрицательных: {sum_neg}");
+
+// 32 Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(4, -9, 9);
+// OutputArray(MySetArray);
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     Console.Write(MySetArray[i] * - 1 + " ");
+// }
+
+
+// 33 Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// -3; массив [6, 7, 19, 345, 3] -> да
+
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+// int[] MySetArray = SetArray(6, -9, 9);
+// OutputArray(MySetArray);
+// Console.WriteLine("Задайте цифру");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// string str = "No";
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (MySetArray[i] == n)
+//     {
+//         str = "Yes";   
+//         break;
+//     }
+    
+// }
+// Console.WriteLine(str);
+
+// 35 Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(123, 0, 500);
+// OutputArray(MySetArray);
+// int n = 0;
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (MySetArray[i] > 9 && MySetArray[i] < 100)
+//     {
+//         n++;
+//     }
+// }
+// Console.WriteLine(n);
+
+// 37 Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(123, 0, 500);
+// OutputArray(MySetArray);
+// int n = 0;
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (MySetArray[i] > 9 && MySetArray[i] < 100)
+//     {
+//         n++;
+//     }
+// }
+// Console.WriteLine(n);
+
+//--------------------------------------------------------------------------------------
+//                                 Домашнее задание 5
+
+//  Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(5, 100, 999);
+// OutputArray(MySetArray);
+// int n = 0;
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (0 == MySetArray[i] % 2)
+//     {
+//         n++;
+//     }
+// }
+// Console.WriteLine(n);
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(5, 1, 100);
+// OutputArray(MySetArray);
+// int sum = 0;
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (0 == i % 2)
+//     {
+//         sum = sum + MySetArray[i];
+//     }
+//     else{}
+// }
+// Console.WriteLine(sum);
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(5, 1, 100);
+// OutputArray(MySetArray);
+// int min = MySetArray[0];
+// int max = MySetArray[0];
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (min > MySetArray[i])
+//     {
+//         min = MySetArray[i];
+//     }
+//     else if (max < MySetArray[i])
+//     {
+//         max = MySetArray[i];
+//     }
+// }
+// Console.WriteLine(max - min);
