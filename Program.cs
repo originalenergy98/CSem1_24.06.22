@@ -859,3 +859,220 @@ for (int i = 1; i <= num; i++)
 //     }
 // }
 // Console.WriteLine(max - min);
+
+//-------------------------------------------------------------------------------------------------
+//                                       Семинар 6
+
+// 39
+// Напишите программу, которая перевернёт одномерный массив
+//(последний элемент будет на первом месте, а первый - на последнем и т.д.)
+
+// int[] GetArray(int size, int minValue, int maxValue)
+// {
+// int[] res = new int[size];
+
+// for (int i = 0; i < size; i++)
+// {
+// res[i] = new Random().Next(minValue, maxValue + 1);
+// }
+// return res;
+// }
+
+// void ReversArray1(int[] inArray)
+// {
+// for (int i = 0; i < inArray.Length / 2; i++)
+// {
+// int k = inArray[i];
+// inArray[i] = inArray[inArray.Length - i - 1];
+// inArray[inArray.Length - i - 1] = k;
+// }
+// }
+
+// int[] ReversArray2(int[] inArray)
+// {
+// int[] result = new int[inArray.Length];
+// for (int i = 0; i < inArray.Length; i++)
+// {
+// result[i] = inArray[inArray.Length - 1 - i];
+// }
+// return result;
+// }
+
+// Console.Clear();
+
+// int[] array = GetArray(10, 0, 10);
+// Console.WriteLine(String.Join(" ", array));
+
+// int[] reversArray=ReversArray2(array);
+// Console.WriteLine(String.Join(" ", reversArray));
+
+// ReversArray1(array);
+// Console.WriteLine(String.Join(" ", array));
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+
+// Console.WriteLine("Введите 1 число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите 2 число: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите 3 число: ");
+// int c = Convert.ToInt32(Console.ReadLine());
+
+// if (a <= b + c && b <= a + c && c <= b + a )
+// {
+//     Console.WriteLine("Треугольник может существовать");
+// }
+// else
+// {
+//     Console.WriteLine("Треугольник не может существовать");
+// }
+
+// 42 Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// Console.WriteLine("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// while (a > 0)
+// {
+//     Console.Write(a%2);
+//     a = a/2;
+// }
+
+
+// 44 Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// Если N = 5 -> 0 1 1 2 3
+// Если N = 3 -> 0 1 1
+// Если N = 7 -> 0 1 1 2 3 5 8
+
+// Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// int b = 1;
+// for (int i = 0; i < a; i++)
+// {
+//     b = i + b;
+//     Console.Write(b + " ");
+//}
+
+// 45
+
+//-------------------------------------------------------------------------------------
+//                                       Домашнее задание 6
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+
+// int[] CreateArray(){ 
+//     Console.WriteLine("Введите количество элементов массива"); 
+//     int size = Convert.ToInt32(Console.ReadLine()); 
+//     int[] RandomArray = new int[size]; 
+//     for (int i = 0; i < size; i++){
+//         Console.WriteLine($"Введите {i+1} элемент массива"); 
+//         RandomArray[i] = Convert.ToInt32(Console.ReadLine()); } 
+// return RandomArray; }
+
+// int[] MySetArray = CreateArray();
+// Console.Clear();
+// Console.WriteLine(MySetArray);
+
+// int count = 0;
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (MySetArray[i] > 0)
+//     {
+//         count = count + 1;
+//     }
+//     else{}
+// }
+// Console.WriteLine($"Колличество цифр введеных больше нуля: " count);
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 0,5)
+
+// Console.Write("Введите точку b1: ");
+// double b1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите точку k1: ");
+// double k1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите точку b2: ");
+// double b2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите точку k2: ");
+// double k2 = Convert.ToInt32(Console.ReadLine());
+
+
+// if (k1 == k2){
+//     if (b1 == b2){
+//         Console.WriteLine("Точек пересечения бесконечно много - прямые совподают ");
+//     } 
+//     else{
+//         Console.WriteLine("Точек пересечения нет");
+//     }   
+// }
+// else{
+//     double x = (b1 -b2)/(k2 - k1);
+//     double y = k1 * x + b1;
+// Console.WriteLine(x + ", " + y );}
+
+//-------------------------------------------------------------------------------------
+//                                       Домашнее задание 7
+
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+
+
+// int[] SetArray(int size, int start, int end){
+//     int[] RandomArray = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void OutputArray(int[] array){
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] MySetArray = SetArray(3, 4, 10);
+// OutputArray(MySetArray);
+// int min = MySetArray[0];
+// int max = MySetArray[0];
+
+// for (int i = 0; i < MySetArray.Length; i++)
+// {
+//     if (min > MySetArray[i])
+//     {
+//         min = MySetArray[i];
+//     }
+//     else if (max < MySetArray[i])
+//     {
+//         max = MySetArray[i];
+//     }
+// }
+// Console.WriteLine(max - min);
+
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 17 -> такого числа в массиве нет
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
