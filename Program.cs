@@ -1016,6 +1016,149 @@ for (int i = 1; i <= num; i++)
 //     double y = k1 * x + b1;
 // Console.WriteLine(x + ", " + y );}
 
+//--------------------------------------------------------------------------------------
+//                                            Семинар 7
+// 46
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i, j] = new Random().Next(minValue, maxValue + 1);
+// }
+// }
+// return result;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+// for (int row = 0; row < inArray.GetLength(0); row++)
+// {
+// for (int column = 0; column < inArray.GetLength(1); column++)
+// {
+// Console.Write($"{inArray[row,column]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+
+
+//48
+
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue){
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++){
+//         for (int j = 0; j < n; j++){
+//             result[i, j] = (i+j);
+//             }
+//         }
+//     return result;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+// for (int row = 0; row < inArray.GetLength(0); row++)
+// {
+// for (int column = 0; column < inArray.GetLength(1); column++)
+// {
+// Console.Write($"{inArray[row,column]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+
+//49 Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue){
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++){
+//         for (int j = 0; j < n; j++){
+//             result[i, j] = new Random().Next(minValue, maxValue + 1);}
+//             }
+//             return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int row = 0; row < inArray.GetLength(0); row++){
+//         for (int column = 0; column < inArray.GetLength(1); column++){
+//             Console.Write($"{inArray[row,column]} ");}
+//             Console.WriteLine();}}
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+//    if (true)
+//    {
+        
+//    }
+
+//51
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue){
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++){
+//         for (int j = 0; j < n; j++){
+//             result[i, j] = new Random().Next(minValue, maxValue + 1);}
+//             }
+//             return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int row = 0; row < inArray.GetLength(0); row++){
+//         for (int column = 0; column < inArray.GetLength(1); column++){
+//             Console.Write($"{inArray[row,column]} ");}
+//             Console.WriteLine();}}
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+
+// int sum = 0;
+// for (int i = 0; i < array.GetLength(0); i++){
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//      while (i == j);
+//      {
+//         sum = sum + array[i, j];
+//      }   
+//     }
+//     Console.WriteLine(sum);
+// }
+
 //-------------------------------------------------------------------------------------
 //                                       Домашнее задание 7
 
@@ -1024,6 +1167,45 @@ for (int i = 1; i <= num; i++)
 // 0,5 7 -2 -0,2
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
+
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, double minValue, double maxValue)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {   
+//             result[i, j] = new Random().Next(minValue, maxValue + 1);
+//         }
+//     }
+// return result;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+//     for (int row = 0; row < inArray.GetLength(0); row++)
+//     {
+//         for (int column = 0; column < inArray.GetLength(1); column++)
+//         {
+//             Console.Write($"{inArray[row,column]} ");
+//             }
+//     Console.WriteLine();
+//     }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// double rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// double columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+
+
+
 
 
 // int[] SetArray(int size, int start, int end){
