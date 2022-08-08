@@ -1289,3 +1289,415 @@ for (int i = 1; i <= num; i++)
 //     }
 //     Console.Write($"{sum/rows} ,");
 // }
+
+//--------------------------------------------------------------------------------------
+//                                        Семинар 8
+
+// Задача 53: Задайте двумерный массив. 
+// Напишите программу, которая поменяет местами первую и последнюю строку массива.
+
+// int[,] GetArray(int a, int b, int minValue, int maxValue){
+//     int[,] result = new int[a,b];
+//     for (int i = 0; i < a; i++){
+//         for (int j = 0; j < b; j++){
+//             result[i,j] = new Random().Next(minValue, maxValue + 1);}}
+//     return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int row = 0; row < inArray.GetLength(0); row++){
+//         for (int colum = 0; colum < inArray.GetLength(1); colum++){
+//             Console.Write($"{inArray[row,colum]}");}
+//             Console.WriteLine();}}
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+// Console.WriteLine("----------------------- ");
+
+// void NewArray(int[,] inArray){
+//     int k = inArray.GetLength(0)-1;
+//     for (int i=0; i < inArray.GetLength(1); i++){
+//         int n = inArray[0, i];
+//         inArray[0,i] = inArray[k, i];
+//         inArray[k,i] = n;}
+//     PrintArray(inArray);}
+// NewArray(array);
+
+// Задача 55: Задайте двумерный массив. 
+// Напишите программу, которая заменяет строки на столбцы.
+// В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+
+
+// int[,] GetArray(int a, int b, int minValue, int maxValue){
+//     int[,] result = new int[a,b];
+//     for (int i = 0; i < a; i++){
+//         for (int j = 0; j < b; j++){
+//             result[i,j] = new Random().Next(minValue, maxValue + 1);}}
+//     return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int row = 0; row < inArray.GetLength(0); row++){
+//         for (int colum = 0; colum < inArray.GetLength(1); colum++){
+//             Console.Write($"{inArray[row,colum]}");}
+//             Console.WriteLine();}}
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = GetArray(rows, columns, 0, 10);
+// PrintArray(myArray);
+
+// Console.WriteLine("----------------------- ");
+// int[,] arrayTwo = new int[myArray.GetLength(0), myArray.GetLength(1)];
+// if (rows == columns){
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             arrayTwo[j,i] = myArray[i,j];
+//         }
+//     }
+//     PrintArray(arrayTwo);
+// }
+// else
+// Console.Write("Строки не равны столбцам");
+
+// Задача 57: Составить частотный словарь элементов двумерного массива. 
+// Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+
+// Задача 59: Задайте двумерный массив из целых чисел. 
+// Напишите программу, которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
+
+
+//--------------------------------------------------------------------------------------
+//                                     Домашее задание 8
+// Задача 54: Задайте двумерный массив.
+// Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+
+
+// int[,] GetArray(int a, int b, int minValue, int maxValue){
+//     int[,] result = new int[a,b];
+//     for (int i = 0; i < a; i++){
+//         for (int j = 0; j < b; j++){
+//             result[i,j] = new Random().Next(minValue, maxValue + 1);}}
+//     return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int row = 0; row < inArray.GetLength(0); row++){
+//         for (int colum = 0; colum < inArray.GetLength(1); colum++){
+//             Console.Write($"{inArray[row,colum]}, ");}
+//             Console.WriteLine();}}
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+// Console.WriteLine("----------------------- ");
+
+// void SortArray(int[,] inArray){
+//     for (int i = 0; i < inArray.GetLength(0); i++){
+//         for (int j = 0; j < inArray.GetLength(1); j++){//доп.цикл для сравнения рядом стоящих элементов
+//             for (int t = j + 1; t < inArray.GetLength(1); t++){
+//                 if (inArray[i, t] > inArray[i, j]){//делаем замену через временную переменную temp
+//                     int temp = inArray[i, j];
+//                     inArray[i, j] = inArray[i, t];
+//                     inArray[i, t] = temp;}}}}
+//                     PrintArray(inArray);}
+//                     SortArray(array);
+
+// Задача 56: Задайте прямоугольный двумерный массив.
+// Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue){
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++){
+//         for (int j = 0; j < n; j++){
+//             result[i, j] = new Random().Next(minValue, maxValue + 1);}}
+//             return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int row = 0; row < inArray.GetLength(0); row++){
+//         for (int column = 0; column < inArray.GetLength(1); column++){
+//             Console.Write($"{inArray[row, column]} ");}
+//             Console.WriteLine();}}
+
+// Console.Write("Введите количество строк массива: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 7);
+// PrintArray(array);
+
+// int GetRowNumbers(int[,] array){
+//     int row = 0;
+//     int minsum = 0;
+//     for (int j = 0; j < array.GetLength(1); j++){
+//         minsum = minsum + array[0, j];}
+
+
+// for (int i = 1; i < array.GetLength(0); i++){
+//     int sum = 0;
+//     for (int j = 0; j < array.GetLength(1); j++){
+//         sum = sum + array[i, j];}
+//         if (minsum > sum){
+//             minsum = sum;
+//             row = i;}}
+//             return row;}
+// Console.WriteLine($"Индекс строки с наименьшей суммой элементов: {GetRowNumbers(array)}");
+
+// Задача 58: Задайте две матрицы.
+// Напишите программу, которая будет находить произведение двух матриц.
+
+// Console.Write("Введите количество строк 1 массива: ");
+// int rowsA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов 1 массива: ");
+// int columnsA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество строк 2 массива: ");
+// int rowsB = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов 2 массива: ");
+// int columnsB = Convert.ToInt32(Console.ReadLine());
+
+// if (columnsA != rowsB){
+//     Console.WriteLine("Такие матрицы умножать нельзя!");
+//     return;}
+// int[,] A = GetArray(rowsA, columnsA, 0, 10);
+// int[,] B = GetArray(rowsB, columnsB, 0, 10);
+// PrintArray(A);
+// Console.WriteLine();
+// PrintArray(B);
+// Console.WriteLine();
+// PrintArray(GetMultiplicationMatrix(A, B));
+
+// int[,] GetArray(int m, int n, int min, int max){
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++){
+//         for (int j = 0; j < n; j++){
+//             result[i, j] = new Random().Next(min, max + 1);}}
+//             return result;}
+
+// void PrintArray(int[,] inArray){
+//     for (int i = 0; i < inArray.GetLength(0); i++){
+//         for (int j = 0; j < inArray.GetLength(1); j++){
+//             Console.Write($"{inArray[i, j]} ");}
+//             Console.WriteLine();}}
+
+// int[,] GetMultiplicationMatrix(int[,] arrayA, int[,] arrayB){
+//     int[,] arrayC = new int[arrayA.GetLength(0), arrayB.GetLength(1)];
+//     for (int i = 0; i < arrayA.GetLength(0); i++){
+//         for (int j = 0; j < arrayB.GetLength(1); j++){
+//             for (int k = 0; k < arrayA.GetLength(1); k++){
+//                 arrayC[i, j] += arrayA[i, k] * arrayB[k, j];}}}
+//                 return arrayC;}
+
+// Задача 60: Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+// Console.Write("Введите размеры массива через пробел:");
+// string[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+// int[,,] array = GetArray(new int[] { int.Parse(nums[0]), int.Parse(nums[1]), int.Parse(nums[2])}, 10, 99);
+// PrintArray(array);
+
+// int[,,] GetArray(int[] sizes, int min, int max){
+//     int[,,] result = new int[sizes[0], sizes[1], sizes[2]];
+//     for (int i = 0; i < result.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < result.GetLength(1); j++)
+//         {
+//             int k = 0;
+//             while(k < result.GetLength(2)){
+//                 int element = new Random().Next(min, max+1);
+//                 if(FindElement(result, element))continue;
+//                 result[i, j, k] = element;
+//                 k++;}}}
+//                 return result;}
+
+// bool FindElement(int[,,] array, int el){
+//     for(int i = 0; i < array.GetLength(0); i++){
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             for (int k = 0; k < array.GetLength(2); k++){
+//                 if(array[i, j, k] == el) return true;}}}
+//                 return false;}
+
+// void PrintArray(int[,,] array){
+//     for (int i = 0; i < array.GetLength(0); i++){
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             for (int k = 0; k < array.GetLength(2); k++){
+//                 Console.Write($"{array[i,j,k]}({i}, {j}, {k})   ");}
+//                 Console.WriteLine();}
+//                 Console.WriteLine();}}
+
+// Задача 62: Заполните спирально массив 4 на 4.
+
+// Console.Write($"Введите размер матрицы: ");
+// int s = int.Parse(Console.ReadLine());
+// int[,] arr = GetArray(s);
+// PrintArray(arr);
+
+// int[,] GetArray(int size){
+//     int[,] result = new int(size, size);
+//     int i = 0;
+//     int j = 0;
+//     int rowE = size - 1;
+//     int columnE = size - 1;
+//     int rowS = 0;
+//     int columnS = 0;
+//     bool left = true;
+//     bool top = true;
+//     int count = 0;
+//     while (count < size + size){
+//         count++;
+//         result[i,j] = count;
+//         //идем вправо
+//         if(left && top){
+//             if(j== columnE){
+//                 rowS++;
+//                 top = true;
+//                 left = false;
+//                 i++;
+//                 continue;}
+//             else{
+//                 j++;
+//                 continue;}}
+//         //идем вниз
+//         if(!left && top){
+//             if(i == rowE){
+//                 columnE--;
+//                 top = false;
+//                 left = false;
+//                 j--;
+//                 continue;}
+//             else{
+//                 i++;
+//                 continue;}}
+//         //идем влево
+//         if(!left && !top){
+//             if(j == columnS){
+//                 rowE--;
+//                 top = false;
+//                 left = true;
+//                 i--;
+//                 continue;}}
+//         //идем вверх
+//         if (left && !top){
+//             columnS++;
+//             top = true;
+//             left = true;
+//             j++;
+//             continue;}
+//         else{
+//             i--;
+//             continue;}}
+//         return result;}
+        
+
+//--------------------------------------------------------------------------------------
+//                                        Семинар 9
+
+
+// Console.Write("Введите натуральное число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// for (int i = 1; i <= N; i++)
+// {
+//     Console.Write($"{i} ");
+// }
+// Console.WriteLine();
+
+// void PrintNumbersString(int number)
+// {
+//     for (int i = 1; i <= number; i++)
+//     {
+
+//         Console.Write($"{i} ");
+//     }
+//     Console.WriteLine();
+// }
+// string PrintNumbersStringType(int number)
+// {
+//     string result = "";
+//     for (int i = 1; i <= number; i++)
+//     {
+//         result += i.ToString()+" ";
+//     }
+//    return result;
+// }
+// Console.Clear();
+// Console.Write("Введите натуральное число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// //PrintNumbers(N);
+// Console.WriteLine(PrintNumbersStringType(N)) ;
+
+string PrintNumbersRecusiveType(int start, int end)
+{
+    if (start == end)
+    {
+        return start.ToString();
+    }
+    return (start + " " + PrintNumbersRecusiveType(start+1, end));
+}
+Console.Clear();
+Console.Write("Введите натуральное число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(PrintNumbersRecusiveType(1, N)) ;
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+// Задача 64: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5. -> "1, 2, 3, 4, 5"
+// M = 4; N = 8. -> "4, 6, 7, 8"
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n. 
+// m = 2, n = 3 -> A(m,n) = 29
+
+//--------------------------------------------------------------------------------------
+//                                     Домашнее задание 9
+
+// Задача 64: Задайте значения M и N.
+// Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5. -> ""1, 2, 3, 4, 5""
+// M = 4; N = 8. -> ""4, 6, 7, 8""
+
+// Console.Write("Number m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Number n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// for (int i = m; i <= n; i++){
+//     Console.Write(i + ", ");
+// }
+
+// Задача 66: Задайте значения M и N.
+// Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+// Console.Write("Number m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Number n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int sum = 0;
+// for (int i = m; i <= n; i++){
+//     sum = sum + i;
+// }
+// Console.Write(sum);
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии.
+// Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 29
