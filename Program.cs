@@ -1604,7 +1604,14 @@ for (int i = 1; i <= num; i++)
 //--------------------------------------------------------------------------------------
 //                                        Семинар 9
 
+// Задача 63: 
+//Задайте значение N.
+// Напишите программу, которая выведет все натуральные числа
+// в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
 
+// // 1 решение стандартное
 // Console.Write("Введите натуральное число: ");
 // int N = Convert.ToInt32(Console.ReadLine());
 // for (int i = 1; i <= N; i++)
@@ -1613,6 +1620,7 @@ for (int i = 1; i <= num; i++)
 // }
 // Console.WriteLine();
 
+// // 2 решение через void
 // void PrintNumbersString(int number)
 // {
 //     for (int i = 1; i <= number; i++)
@@ -1622,6 +1630,8 @@ for (int i = 1; i <= num; i++)
 //     }
 //     Console.WriteLine();
 // }
+
+// // 3 решение через string
 // string PrintNumbersStringType(int number)
 // {
 //     string result = "";
@@ -1634,21 +1644,25 @@ for (int i = 1; i <= num; i++)
 // Console.Clear();
 // Console.Write("Введите натуральное число: ");
 // int N = Convert.ToInt32(Console.ReadLine());
-// //PrintNumbers(N);
+// //PrintNumbers(N); // вывод
 // Console.WriteLine(PrintNumbersStringType(N)) ;
 
-string PrintNumbersRecusiveType(int start, int end)
-{
-    if (start == end)
-    {
-        return start.ToString();
-    }
-    return (start + " " + PrintNumbersRecusiveType(start+1, end));
-}
-Console.Clear();
-Console.Write("Введите натуральное число: ");
-int N = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(PrintNumbersRecusiveType(1, N)) ;
+
+// Рекурсия
+// string PrintNumbersRecusiveType(int start, int end)
+// {
+//     if (start == end)
+//     {
+//         return start.ToString();
+//     }
+//     return (start + " " + PrintNumbersRecusiveType(start+1, end));
+// }
+
+// Console.Clear();
+// Console.Write("Введите натуральное число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(PrintNumbersRecusiveType(1, N)) ;
+
 
 // Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
 // 453 -> 12
@@ -1669,23 +1683,44 @@ Console.WriteLine(PrintNumbersRecusiveType(1, N)) ;
 //                                     Домашнее задание 9
 
 // Задача 64: Задайте значения M и N.
-// Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// Напишите программу, которая выведет все натуральные числа 
+// в промежутке от M до N.
+
 // M = 1; N = 5. -> ""1, 2, 3, 4, 5""
 // M = 4; N = 8. -> ""4, 6, 7, 8""
 
-// Console.Write("Number m: ");
-// int m = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Number n: ");
-// int n = Convert.ToInt32(Console.ReadLine());
+// string RecusiveType(int start, int end){
+//     if (start == end){
+//         return start.ToString();}
+//     return (start + " " + RecusiveType(start+1, end));}
 
-// for (int i = m; i <= n; i++){
-//     Console.Write(i + ", ");
-// }
+// Console.WriteLine();
+// Console.Write("Number m: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Number n: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(RecusiveType(M, N)) ;
+
 
 // Задача 66: Задайте значения M и N.
-// Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// Напишите программу, которая найдёт сумму натуральных элементов
+// в промежутке от M до N.
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
+
+string RecusiveSum(int start, int end){
+    if (start == end) return start.ToString();
+    else return (start + " " + RecusiveSum(start - 1, end));}
+
+Console.WriteLine();
+Console.Write("Number m: ");
+int M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Number n: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(RecusiveSum(M, N)) ;
+
 
 // Console.Write("Number m: ");
 // int m = Convert.ToInt32(Console.ReadLine());
