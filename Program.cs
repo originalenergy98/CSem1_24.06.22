@@ -1663,16 +1663,48 @@ for (int i = 1; i <= num; i++)
 // int N = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine(PrintNumbersRecusiveType(1, N)) ;
 
-
-// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
-// 453 -> 12
-// 45 -> 9
-// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
-// A = 3; B = 5 -> 243 (3⁵)
-// A = 2; B = 3 -> 8
-// Задача 64: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// Задача 64: Задайте значения M и N. Напишите программу,
+// которая выведет все натуральные числа в промежутке 
+// от M до N.
 // M = 1; N = 5. -> "1, 2, 3, 4, 5"
 // M = 4; N = 8. -> "4, 6, 7, 8"
+
+// string PrintNumbersRecusiveType(int start, int end)
+// {
+//     if (start == end)
+//     {
+//         return start.ToString();
+//     }
+//     return (start + " " + PrintNumbersRecusiveType(start+1, end));
+// }
+
+// Console.Clear();
+// Console.Write("Введите 1 натуральное число: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите 2 натуральное число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(PrintNumbersRecusiveType(M, N)) ;
+
+// Задача 67: Напишите программу, которая будет принимать на вход число 
+// и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+// Console.Write("Введите число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"{N}->{SumNumbers(N)}");
+
+// int SumNumbers(int number){
+//     if (number == 0) return 0;
+//     return number % 10 + SumNumbers(number/10);}
+
+// Задача 69: Напишите программу, которая на вход принимает
+// два числа A и B, и возводит число А в целую степень B 
+// с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
@@ -1709,17 +1741,17 @@ for (int i = 1; i <= num; i++)
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-string RecusiveSum(int start, int end){
-    if (start == end) return start.ToString();
-    else return (start + " " + RecusiveSum(start - 1, end));}
+// int RecusiveSum(int start, int end){
+//     if (start == end) return end;
+//     else return (start + RecusiveSum(start-1, end));}
 
-Console.WriteLine();
-Console.Write("Number m: ");
-int M = Convert.ToInt32(Console.ReadLine());
-Console.Write("Number n: ");
-int N = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+// Console.Write("Number m: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Number n: ");
+// int N = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(RecusiveSum(M, N)) ;
+// Console.WriteLine(RecusiveSum(M, N)) ;
 
 
 // Console.Write("Number m: ");
