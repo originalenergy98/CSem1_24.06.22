@@ -1743,7 +1743,7 @@ for (int i = 1; i <= num; i++)
 
 // int RecusiveSum(int start, int end){
 //     if (start == end) return end;
-//     else return (start + RecusiveSum(start-1, end));}
+//     else return (start + RecusiveSum(start + 1, end));}
 
 // Console.WriteLine();
 // Console.Write("Number m: ");
@@ -1754,17 +1754,13 @@ for (int i = 1; i <= num; i++)
 // Console.WriteLine(RecusiveSum(M, N)) ;
 
 
-// Console.Write("Number m: ");
-// int m = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Number n: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-
-// int sum = 0;
-// for (int i = m; i <= n; i++){
-//     sum = sum + i;
-// }
-// Console.Write(sum);
-
 // Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии.
 // Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 29
+
+int Recusive(int start, int end){
+    if (start == 0) return start +1;
+    if (start > 0 && end == 0) return Recusive(start - 1, 1);
+    if (start > 0 && end > 0) return Recusive(start - 1,Recusive(start, end-1));}
+
+Console.WriteLine(Recusive(2, 3)) ;
