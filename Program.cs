@@ -1758,12 +1758,12 @@ for (int i = 1; i <= num; i++)
 // Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 29
 
-int RecursionA(int start, int end){
-    if (start == 0) {
-        return end + 1;}
-    else if (start == 0 && end > 0) {
-        return RecursionA(start - 1, 1);}
-    else {
-        return RecursionA(start - 1, RecursionA(start, end - 1));}}
+// int RecursionA(int start, int end){
+//     if (start == 0) {
+//         return end + 1;}
+//     else if (start == 0 && end > 0) {
+//         return RecursionA(start - 1, 1);}
+//     else {
+//         return RecursionA(start - 1, RecursionA(start, end - 1));}}
 
-Console.Write(RecursionA(2, 3));
+// Console.Write(RecursionA(2, 3));
