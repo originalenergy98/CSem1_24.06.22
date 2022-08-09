@@ -1758,9 +1758,13 @@ for (int i = 1; i <= num; i++)
 // Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 29
 
-int Recusive(int start, int end){
-    if (start == 0) return start +1;
-    if (start > 0 && end == 0) return Recusive(start - 1, 1);
-    if (start > 0 && end > 0) return Recusive(start - 1,Recusive(start, end-1));}
+int recursion(int start, int end){
+    if (start == 0) {
+        return end + 1;}
+    else if (start == 0 && end > 0) {
+        return recursion(start - 1, 1);}
+    else {
+            return recursion(start - 1, recursion(start, end - 1));
+    }}
 
-Console.WriteLine(Recusive(2, 3)) ;
+Console.WriteLine(recursion(2, 3));
